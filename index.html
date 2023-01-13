@@ -35,6 +35,14 @@
     <link href="css/style.css" rel="stylesheet" />
     <!-- responsive style -->
     <link href="css/responsive.css" rel="stylesheet" />
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("vl1g-7KW__4V-CjgM");
+   })();
+</script>
     <style>
       .popup{
         width: 400px;
@@ -589,6 +597,21 @@ function validateForm() {
         //open popup messege
         popup.classList.add("open-popup");
        
+             //Send massage via email
+    var templateParams = {
+    full_Names: document.getElementById('full_Names').value,
+    input_message: document.getElementById('input_message').value,
+    phone_number: document.getElementById('phone_number').value,
+    email: document.getElementById('email').value,
+    };
+  
+    emailjs.send('service_ck6bco6', 'template_s2b850u', templateParams)
+    .then(function(response) {
+       console.log('SUCCESS!', response.status, response.text);
+    }, function(error) {
+       console.log('FAILED...', error);
+    });
+    
        //Clear input values
        document.getElementById('full_Names').value = "";
        document.getElementById('email').value = "";
