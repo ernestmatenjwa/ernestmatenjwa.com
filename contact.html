@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>Ernest Matenjwa | Contact me</title>
+
+  <!-- slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,700|Roboto:400,700&display=swap" rel="stylesheet" />
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("vl1g-7KW__4V-CjgM");
+   })();
+</script>
+  <style>
+      .popup{
+        width: 400px;
+        background: #fff;
+        border-radius: 6px;
+        position: absolute;
+        top: 0%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.1);
+        text-align: center;
+        padding: 0 30px 30px;
+        color: #333;
+        visibility: hidden;
+        transition: transform 0.4s, top 0.4s;
+      }
+      .open-popup{
+        visibility: visible;
+        top: 50%;
+        transform: translate(-50%, -50%) scale(1);
+      }
+      .popup img{
+        width: 100px;
+        margin-top: -50px;
+        border-radius: 50%;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      }
+      .popup h2{
+        font-size: 38px;
+        font-weight: 500;
+        margin: 30px 0 10px;
+      }
+      .popup button{
+        width: 100%;
+        margin-top: 50px;
+        padding: 10px 0;
+        
+      }
+  </style>
+</head>
+
+<body>
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-11 offset-md-1 px-0">
+            <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
+             
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+                  <ul class="navbar-nav  ">
+                    <li class="nav-item ">
+                      <a class="nav-link pl-0" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="about.html"> About </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="Experience.html">My Experience </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="References.html"> References </a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link" href="contact.html">Contact me</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- end header section -->
+
+  </div>
+  <!-- end hero area -->
+
+  <!-- contact section -->
+
+  <section class="contact_section layout_padding" style="background-color: whitesmoke;">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          Contact me
+        </h2>
+      </div>
+      <div class="">
+        <div class="">
+          <div class="row">
+            <div class="col-md-9 mx-auto">
+              <div class="contact-form">
+                <div id="error_msg" style="background: #fe8b8e; padding: 0px; margin-bottom: 20px; text-align: center; font-size: 14px; transition: all 0.5s ease;"></div>
+                <fieldset id="disable_">
+                <div>
+                  <div>
+                    <input type="text" placeholder="Full Name" id="full_Names" />
+                  </div>
+                  <div>
+                    <input type="text" placeholder="Phone Number" id="phone_number" />
+                  </div>
+                  <div>
+                    <input type="email" placeholder="Email Address" id="email"/>
+                  </div>
+                  <div>
+                    <input
+                      type="text"
+                      placeholder="Message"
+                      class="input_message"
+                      id="input_message"
+                    />
+                  </div>
+                  <div class="d-flex justify-content-center">
+                    <button onclick="validateForm()" class="btn_on-hover">
+                      Send message
+                    </button>
+                  </div>
+                  
+                </div>
+              </fieldset>
+                <div class="popup" id="popup">
+                  <img src="images/success.png" alt="">
+                  <h2>Thank You!</h2>
+                  <p id="success_msg2" style="color: grey; font-weight: bold;"></p>
+                  <button onclick="closePopup()">OK</button>
+               </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end contact section -->
+
+  <!-- info section -->
+  <section class="info_section layout_padding-top layout_padding2-bottom">
+    <div class="container">
+      <div class="social_container">
+        <h2>
+          Follow me
+        </h2>
+        <div class="social_box">
+          <a href="https://web.facebook.com/people/AlEx-MAthenjwa/100005928735247/">
+            <img src="images/fb.png" alt="" />
+          </a>
+        
+          <a href="https://www.linkedin.com/in/ernest-matenjwa-1a243925b">
+            <img src="images/linkedin.png" alt="" />
+          </a>
+          <a href="https://github.com/ernestmatenjwa/">
+            <img src="images/giticon.ico" alt="" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end info_section -->
+
+  <!-- footer section -->
+  <section class="container-fluid footer_section">
+    <div class="container">
+      <p>
+        &copy; 2023 All Rights Reserved By
+        <a href="">Ernest Matenjwa</a>
+      </p>
+    </div>
+  </section>
+  <!-- footer section -->
+
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+
+  <script>
+    let popup = document.getElementById("popup");
+
+    function openNav() {
+      document.getElementById("myNav").style.width = "100%";
+    }
+
+    function closeNav() {
+      document.getElementById("myNav").style.width = "0%";
+    }
+    const isValidEmail = email => {
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
+function closePopup() {
+  popup.classList.remove("open-popup");
+  document.getElementById('disable_').disabled = false;
+}
+function validateForm() {
+
+var valid = true;
+
+     const grpName = document.getElementById('full_Names');
+     const grpEmail = document.getElementById('email');
+     const regNo = document.getElementById('input_message');
+     const contNo = document.getElementById('phone_number');
+     const error_msg = document.getElementById('error_msg');
+     const success_msg1 = document.getElementById('success_msg1');
+     const success_msg2 = document.getElementById('success_msg2');
+     var text;
+
+     const grpNameValue = grpName.value.trim();
+     const grpEmailValue = grpEmail.value.trim();
+     const msgValue = regNo.value.trim();
+     const contNoValue = contNo.value.trim();
+
+     //validation of input elements
+     if(grpNameValue.length < 3){
+      error_msg.style.padding = "10px"
+      document.getElementById("error_msg").style.display = "block";
+     text = "Please enter a valid name!";
+     error_msg.innerHTML = text;
+      valid = false;
+     }else if(contNoValue.length != 10){
+      error_msg.style.padding = "10px"
+      document.getElementById("error_msg").style.display = "block";
+     text = "Please enter a valid phone number!";
+     error_msg.innerHTML = text;
+      valid = false;
+     }
+     else if(!isValidEmail(grpEmailValue) || grpEmailValue.length < 3) {
+      error_msg.style.padding = "10px"
+      document.getElementById("error_msg").style.display = "block";
+      text = "Please enter a valid email!!";
+      error_msg.innerHTML = text;
+      valid = false
+    } else if(msgValue.length < 3){
+      error_msg.style.padding = "10px"
+      document.getElementById("error_msg").style.display = "block";
+     text = "Please enter a valid message!";
+     error_msg.innerHTML = text;
+      valid = false;
+     }else {
+      //hide the error element
+      error_msg.style.padding = "0px";
+      document.getElementById("error_msg").style.display = "none";
+      
+      //success message
+     var text2 = document.getElementById("full_Names").value + ", ";
+     var text3 =  text2 + "your message was sent successfully i will respond to your massage within 45 hours via email";
+      success_msg2.innerHTML = text3;
+
+      //open popup messege
+      popup.classList.add("open-popup");
+
+        //Send massage via email
+    var templateParams = {
+    full_Names: document.getElementById('full_Names').value,
+    input_message: document.getElementById('input_message').value,
+    phone_number: document.getElementById('phone_number').value,
+    email: document.getElementById('email').value,
+    };
+  
+    emailjs.send('service_ck6bco6', 'template_s2b850u', templateParams)
+    .then(function(response) {
+       console.log('SUCCESS!', response.status, response.text);
+    }, function(error) {
+       console.log('FAILED...', error);
+    });
+     
+     //Clear input values
+     document.getElementById('full_Names').value = "";
+     document.getElementById('email').value = "";
+     document.getElementById('input_message').value = "";
+     document.getElementById('phone_number').value = "";
+     document.getElementById('disable_').disabled = true;
+     }
+// return the valid status
+return valid; 
+}
+  </script>
+
+</body>
+
+</html>
